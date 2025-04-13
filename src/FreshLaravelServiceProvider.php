@@ -17,8 +17,7 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('fresh-laravel')
-            ->hasConfigFile('fresh-laravel')
-            ->hasConfigFile('next-laravel')
+            ->hasConfigFile()
             ->hasViews();
     }
 }
