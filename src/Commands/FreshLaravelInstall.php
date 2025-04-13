@@ -22,6 +22,9 @@ class FreshLaravelInstall extends Command
 
         $json = json_decode(file_get_contents($packageJsonPath), true);
 
+        $json['scripts']['docs:dev'] = 'vuepress dev docs';
+        $json['scripts']['docs:build'] = 'vuepress build docs';
+
         $json['dependencies']['@vitejs/plugin-vue'] = '^5.0.4';
         $json['dependencies']['filepond'] = '^4.31.1';
         $json['dependencies']['filepond-plugin-file-validate-type'] = '^1.2.9';
