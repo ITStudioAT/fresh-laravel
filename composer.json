@@ -37,7 +37,6 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Itstudioat\\FreshLaravel\\": "packages/itstudioat/fresh-laravel/src/",
             "Workbench\\App\\": "workbench/app/"
         }
     },

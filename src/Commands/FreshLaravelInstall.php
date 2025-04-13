@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Itstudioat\FreshLaravel\Commands;
 
 use Illuminate\Console\Command;
