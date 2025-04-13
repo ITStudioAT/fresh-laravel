@@ -1,0 +1,38 @@
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+import vue from '@vitejs/plugin-vue';
+import vuetify from 'vite-plugin-vuetify';
+
+export default defineConfig({
+    plugins: [
+
+        laravel([
+
+        ]),
+        vue({
+            template: {
+                transformAssetUrls: {
+                    base: null,
+                    includeAbsolute: false,
+                },
+            },
+        }),
+        vuetify({
+
+
+
+        }),
+
+    ],
+
+    build: {
+        sourcemap: true,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                },
+            },
+        },
+        chunkSizeWarningLimit: 500,
+    }
+});

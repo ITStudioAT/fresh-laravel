@@ -28,10 +28,20 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
         ], 'fresh-laravel-config');
 
+        // Publish Vite assets (JS, CSS)
+        $this->publishes([
+            __DIR__ . '/../resources/js' => public_path('vendor/fresh-laravel/js'),
+            __DIR__ . '/../resources/css' => public_path('vendor/fresh-laravel/css'),
+            __DIR__ . '/../vite.config.js' => base_path('vite.config.js'),
+        ], 'fresh-laravel-assets');
+
 
         // Publish all together under a general tag
         $this->publishes([
             __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
+            __DIR__ . '/../resources/js' => public_path('vendor/fresh-laravel/js'),
+            __DIR__ . '/../resources/css' => public_path('vendor/fresh-laravel/css'),
+            __DIR__ . '/../vite.config.js' => base_path('vite.config.js'),
         ], 'fresh-laravel-all');
     }
 }
