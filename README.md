@@ -1,1 +1,3 @@
-php artisan vendor:publish --tag=package-json
+php artisan fresh-laravel:install
+npm install
+
