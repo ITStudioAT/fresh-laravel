@@ -20,4 +20,18 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             ->hasConfigFile('fresh-laravel')
             ->hasViews();
     }
+
+    public function boot()
+    {
+        // Publish config file
+        $this->publishes([
+            __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
+        ], 'fresh-laravel-config');
+
+
+        // Publish all together under a general tag
+        $this->publishes([
+            __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
+        ], 'fresh-laravel-all');
+    }
 }
