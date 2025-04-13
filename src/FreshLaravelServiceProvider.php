@@ -24,6 +24,13 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
 
     public function boot()
     {
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Itstudioat\FreshLaravel\Commands\FreshLaravelInstall::class,
+            ]);
+        }
+
         // Publish config file
         $this->publishes([
             __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
