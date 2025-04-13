@@ -14,7 +14,7 @@ class FreshLaravelInstall extends Command
         $this->info('🔧 Installing JS dependencies from fresh-laravel package…');
 
         $appPackageJsonPath = base_path('package.json');
-        $packagePackageJsonPath = __DIR__ . '/../../../package.json';
+        $packagePackageJsonPath = dirname(__DIR__, 2) . '/package.json';
 
         if (!file_exists($appPackageJsonPath)) {
             $this->error('🚫 package.json in Laravel-App nicht gefunden.');
