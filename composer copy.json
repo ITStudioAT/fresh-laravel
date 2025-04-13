@@ -72,6 +72,18 @@
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
         "format": "vendor/bin/pint",
+        
+        "post-install-cmd": [
+            "@php artisan vendor:publish --tag=fresh-laravel-all",
+            "npm install --prefix ./",
+            "npm run dev --prefix ./"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=fresh-laravel-all",
+            "npm install --prefix ./",
+            "npm run dev --prefix ./"
+        ]
+        
     },
     "config": {
         "sort-packages": true,
