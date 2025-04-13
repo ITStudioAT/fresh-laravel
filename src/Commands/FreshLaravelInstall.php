@@ -11,47 +11,39 @@ class FreshLaravelInstall extends Command
 
     public function handle()
     {
-        $this->info('🔧 Installing JS dependencies from fresh-laravel package…');
+        /*
+        $packageJsonPath = base_path('package.json');
 
-        $appPackageJsonPath = base_path('package.json');
-        $packagePackageJsonPath = dirname(__DIR__, 2) . '/package.json';
-
-        if (!file_exists($appPackageJsonPath)) {
-            $this->error('🚫 package.json in Laravel-App nicht gefunden.');
-            return 1;
+        if (!file_exists($packageJsonPath)) {
+            $this->error('package.json not found.');
+            return;
         }
 
-        $appPackage = json_decode(file_get_contents($appPackageJsonPath), true);
-        $packagePackage = json_decode(file_get_contents($packagePackageJsonPath), true);
+        $json = json_decode(file_get_contents($packageJsonPath), true);
 
-        $merged = false;
+        $json['dependencies']['@vitejs/plugin-vue'] = '^5.0.4';
+        $json['dependencies']['filepond'] = '^4.31.1';
+        $json['dependencies']['filepond-plugin-file-validate-type'] = '^1.2.9';
+        $json['dependencies']['filepond-plugin-image-preview'] = '^4.6.12';
+        $json['dependencies']['pinia'] = '^2.1.7';
+        $json['dependencies']['puppeteer'] = '^23.4.0';
+        $json['dependencies']['sass-embedded'] = '^1.83.4';
+        $json['dependencies']['shiki'] = '^3.3.0';
+        $json['dependencies']['vite-plugin-vuetify'] = '^3.3.0';
+        $json['dependencies']['vue'] = '^3.3.0';
+        $json['dependencies']['vue-filepond'] = '^3.3.0';
+        $json['dependencies']['vue-router'] = '^3.3.0';
+        $json['dependencies']['vuetify'] = '^3.3.0';
 
-        foreach (['dependencies', 'devDependencies'] as $type) {
-            if (!isset($packagePackage[$type])) continue;
 
-            foreach ($packagePackage[$type] as $pkg => $version) {
-                if (!isset($appPackage[$type][$pkg])) {
-                    $appPackage[$type][$pkg] = $version;
-                    $this->line("➕ $pkg ($type) hinzugefügt");
-                    $merged = true;
-                }
-            }
-        }
+        $json['devDependencies']['@vitejs/plugin-vue'] = '^5.0.0';
 
-        if ($merged) {
-            file_put_contents($appPackageJsonPath, json_encode($appPackage, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-            $this->info('✅ package.json aktualisiert.');
+        ksort($json['dependencies']);
+        ksort($json['devDependencies']);
 
-            if ($this->confirm('📦 npm install jetzt ausführen?', true)) {
-                shell_exec('npm install');
-                $this->info('📦 npm install ausgeführt.');
-            } else {
-                $this->warn('⚠️ npm install nicht ausgeführt. Bitte manuell ausführen.');
-            }
-        } else {
-            $this->info('✔️ Alle Abhängigkeiten waren bereits vorhanden.');
-        }
+        file_put_contents($packageJsonPath, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
-        return 0;
+        $this->info('Vue dependencies added to package.json. Run npm install to install them.');
+        */
     }
 }
