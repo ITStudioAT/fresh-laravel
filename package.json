@@ -1,0 +1,23 @@
+{
+  "name": "fresh-laravel",
+  "version": "1.0.0",
+  "description": "[![Latest Version on Packagist](https://img.shields.io/packagist/v/itstudioat/fresh-laravel.svg?style=flat-square)](https://packagist.org/packages/itstudioat/fresh-laravel)\r [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/itstudioat/fresh-laravel/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/itstudioat/fresh-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)\r [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/itstudioat/fresh-laravel/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/itstudioat/fresh-laravel/actions?query=workflow%3A\"Fix+PHP+code+style+issues\"+branch%3Amain)\r [![Total Downloads](https://img.shields.io/packagist/dt/itstudioat/fresh-laravel.svg?style=flat-square)](https://packagist.org/packages/itstudioat/fresh-laravel)",
+  "homepage": "https://github.com/ITStudioAT/fresh-laravel#readme",
+  "bugs": {
+    "url": "https://github.com/ITStudioAT/fresh-laravel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITStudioAT/fresh-laravel.git"
+  },
+  "license": "MIT",
+  "author": "Guenther Kron",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
