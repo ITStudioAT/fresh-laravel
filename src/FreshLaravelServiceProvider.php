@@ -4,6 +4,7 @@ namespace Itstudioat\FreshLaravel;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Itstudioat\FreshLaravel\Commands\FreshLaravelInstall;
 
 
 class FreshLaravelServiceProvider extends PackageServiceProvider
@@ -19,7 +20,7 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             ->name('fresh-laravel')
             ->hasConfigFile('fresh-laravel')
             ->hasViews()
-            ->hasCommand(Itstudioat\FreshLaravel\Commands\FreshLaravelInstall::class);
+            ->hasCommand(FreshLaravelInstall::class);
     }
 
     public function boot()
