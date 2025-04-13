@@ -49,7 +49,12 @@
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "post-install-cmd": [
+            "@php artisan vendor:publish --tag=fresh-laravel-assets", // Optional: to publish assets
+            "npm install --prefix ./", // Automatically run `npm install` to install Vue (and any other NPM dependencies)
+            "npm run dev --prefix ./" // Optionally, you can compile the assets right after installing
+        ]
     },
     "config": {
         "sort-packages": true,
