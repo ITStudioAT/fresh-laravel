@@ -40,9 +40,7 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             __DIR__ . '/../src/Commands/FreshLaravelInstall.php' => base_path('app/Console/Commands/FreshLaravelInstall.php'),
         ], 'fresh-laravel-commands');
 
-        $this->publishes([
-            __DIR__ . '/../stubs/package.json.stub' => base_path('package.json.stub'),
-        ], 'package-json');
+
 
 
 
@@ -61,7 +59,6 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             __DIR__ . '/../resources/css' => public_path('vendor/fresh-laravel/css'),
             __DIR__ . '/../vite.config.js' => base_path('vite.config.js'),
             __DIR__ . '/../src/Commands/FreshLaravelInstall.php' => base_path('app/Console/Commands/FreshLaravelInstall.php'),
-            __DIR__ . '/../stubs/package.json.stub' => base_path('package.json.stub'),
         ], 'fresh-laravel-all');
     }
 }

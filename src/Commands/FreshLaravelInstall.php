@@ -11,7 +11,7 @@ class FreshLaravelInstall extends Command
 
     public function handle()
     {
-        /*
+
         $packageJsonPath = base_path('package.json');
 
         if (!file_exists($packageJsonPath)) {
@@ -44,6 +44,5 @@ class FreshLaravelInstall extends Command
         file_put_contents($packageJsonPath, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
         $this->info('Vue dependencies added to package.json. Run npm install to install them.');
-        */
     }
 }
