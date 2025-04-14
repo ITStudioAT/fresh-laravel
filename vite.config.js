@@ -8,6 +8,7 @@ export default defineConfig({
 
         laravel([
             'resources/js/apps/homepage.js',
+            'resources/js/apps/admin.js',
         ]),
         vue({
             template: {

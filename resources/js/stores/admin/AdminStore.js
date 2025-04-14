@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-export const useHomepageStore = defineStore("HomepageStore", {
+export const useAdminStore = defineStore("AdminStore", {
 
     state: () => {
         return {
@@ -25,10 +25,10 @@ export const useHomepageStore = defineStore("HomepageStore", {
         async config(router) {
             this.is_loading++;
             try {
-                const response = await axios.get("/api/homepage/config", {});
+                const response = await axios.get("/api/admin/config", {});
                 this.config = response.data;
             } catch (error) {
-                this.router.push({ path: '/homepage/error', query: { status: error.response.status, message: error.response.data.message } });
+                this.router.push({ path: '/admin/error', query: { status: error.response.status, message: error.response.data.message } });
             } finally {
                 this.is_loading--;
             }

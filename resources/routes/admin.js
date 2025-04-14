@@ -1,9 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Index from '@/pages/homepage/index/Index.vue'
+import Index from '@/pages/admin/index/Index.vue'
+import Feedback_Error from '@/pages/admin/feedback/Error.vue'
+
+
 
 
 const routes = [
-    { path: '/', component: Index },
+    { path: '/admin', component: Index },
+    { path: '/admin/error', component: Feedback_Error },
 
 
 ];

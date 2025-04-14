@@ -31,7 +31,7 @@
 
 <script>
 import { mapWritableState } from "pinia";
-import { useHomepageStore } from "@/stores/homepage/HomepageStore";
+import { useAdminStore } from "@/stores/admin/AdminStore";
 import ErrorMessage from "@/pages/homepage/components/ErrorMessage.vue";
 
 export default {
@@ -39,8 +39,8 @@ export default {
     components: { ErrorMessage },
 
     async beforeMount() {
-        this.homepageStore = useHomepageStore(); this.homepageStore.initialize(this.$router);
-        this.homepageStore.config();
+        this.adminStore = useAdminStore(); this.adminStore.initialize(this.$router);
+        this.adminStore.config();
     },
 
     unmounted() {
@@ -48,12 +48,12 @@ export default {
 
     data() {
         return {
-            homepageStore: null,
+            adminStore: null,
         };
     },
 
     computed: {
-        ...mapWritableState(useHomepageStore, ['config', 'is_loading', 'error']),
+        ...mapWritableState(useAdminStore, ['config', 'is_loading', 'error']),
 
     },
 
