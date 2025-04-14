@@ -11,6 +11,9 @@ Make sure, your values are correct
 ## routes/web.php
 Delete the Initial route /
 
+## Link your Storage-Folder
+php artisan storage:link
+
 
 
 

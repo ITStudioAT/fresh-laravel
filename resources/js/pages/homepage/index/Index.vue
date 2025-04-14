@@ -1,3 +1,3 @@
-<component>
+<template>
     Index.vue
-</component>
+</template>
