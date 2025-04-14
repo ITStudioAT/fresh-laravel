@@ -58,6 +58,8 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
         $this->publishes([
             __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
             __DIR__ . '/../resources/js' => public_path('vendor/fresh-laravel/js'),
+            __DIR__ . '/../resources/js/apps' => public_path('vendor/fresh-laravel/js/apps'),
+            __DIR__ . '/../resources/js/pages/homepage/index' => public_path('vendor/fresh-laravel/js/pages/homepage/index'),
             __DIR__ . '/../resources/plugins' => public_path('vendor/fresh-laravel/plugins'),
             __DIR__ . '/../resources/routes' => public_path('vendor/fresh-laravel/routes'),
             __DIR__ . '/../resources/css' => public_path('vendor/fresh-laravel/css'),
