@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [
 
         laravel([
-
+            'resources/js/apps/homepage.js',
         ]),
         vue({
             template: {
