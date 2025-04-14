@@ -64,6 +64,7 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             __DIR__ . '/../vite.config.js' => base_path('vite.config.js'),
             __DIR__ . '/../README.MD' => base_path('README.MD'),
             __DIR__ . '/../src/Commands/FreshLaravelInstall.php' => base_path('app/Console/Commands/FreshLaravelInstall.php'),
+            __DIR__ . '/../src/Http/Controllers' => base_path('app/Http/Controllers'),
             __DIR__ . '/../resources/views/homepage.blade.php' => base_path('resources/views/homepage.blade.php'),
         ], 'fresh-laravel-all');
     }
