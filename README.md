@@ -1,3 +1,6 @@
+## Installing
+composer require itstudioat/fresh-laravel
+
 ## Publishing
 php artisan vendor:publish --tag=fresh-laravel-all --ansi --force
 
