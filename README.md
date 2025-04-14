@@ -8,5 +8,10 @@ npm install
 ## Edit .env config.app
 Make sure, your values are correct
 
+## routes/web.php
+Delete the Initial route /
+
+
+
 
 

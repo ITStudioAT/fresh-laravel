@@ -1,0 +1,3 @@
+<component>
+    Index.vue
+</component>
