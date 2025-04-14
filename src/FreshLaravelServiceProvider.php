@@ -31,6 +31,8 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             ]);
         }
 
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+
         // Publish config file
         $this->publishes([
             __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
