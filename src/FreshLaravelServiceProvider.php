@@ -58,6 +58,8 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
         $this->publishes([
             __DIR__ . '/../config/fresh-laravel.php' => config_path('fresh-laravel.php'),
             __DIR__ . '/../resources/js' => base_path('resources/js'),
+            __DIR__ . '/../resources/plugins' => base_path('resources/plugins'),
+            __DIR__ . '/../resources/routes' => base_path('resources/routes'),
             __DIR__ . '/../vite.config.js' => base_path('vite.config.js'),
             __DIR__ . '/../README.MD' => base_path('README.MD'),
             __DIR__ . '/../src/Commands/FreshLaravelInstall.php' => base_path('app/Console/Commands/FreshLaravelInstall.php'),
