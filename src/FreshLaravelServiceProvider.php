@@ -18,7 +18,7 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
         $package
             ->name('fresh-laravel')
             ->hasConfigFile('fresh-laravel')
-            ->hasViews()
+            ->hasViews('homepage')
             ->hasCommand(\Itstudioat\FreshLaravel\Commands\FreshLaravelInstall::class);
     }
 
@@ -40,10 +40,6 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             __DIR__ . '/../src/Commands/FreshLaravelInstall.php' => base_path('app/Console/Commands/FreshLaravelInstall.php'),
         ], 'fresh-laravel-commands');
 
-
-
-
-
         // Publish Vite assets (JS, CSS)
         $this->publishes([
             __DIR__ . '/../resources/js' => public_path('vendor/fresh-laravel/js'),
@@ -58,7 +54,10 @@ class FreshLaravelServiceProvider extends PackageServiceProvider
             __DIR__ . '/../resources/js' => public_path('vendor/fresh-laravel/js'),
             __DIR__ . '/../resources/css' => public_path('vendor/fresh-laravel/css'),
             __DIR__ . '/../vite.config.js' => base_path('vite.config.js'),
+            __DIR__ . '/../README.MD' => base_path('README.MD'),
             __DIR__ . '/../src/Commands/FreshLaravelInstall.php' => base_path('app/Console/Commands/FreshLaravelInstall.php'),
         ], 'fresh-laravel-all');
     }
+
+    public function packageRegistered() {}
 }

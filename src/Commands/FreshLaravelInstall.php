@@ -13,6 +13,7 @@ class FreshLaravelInstall extends Command
     public function handle()
     {
 
+        // package.json
         $packageJsonPath = base_path('package.json');
 
         if (!file_exists($packageJsonPath)) {
